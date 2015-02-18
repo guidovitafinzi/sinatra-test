@@ -5,7 +5,8 @@ get '/' do
   erb :index
 end
 
-get '/secret' do
-  'this is the same secret page'
+get '/hello' do
+  @visitor = params[:name]
+  erb :index
 end
 
